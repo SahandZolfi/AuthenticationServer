@@ -7,7 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuthenticationServer.Core\AuthenticationServer.Core.csproj" />
+    <ProjectReference Include="..\AuthenticationServer.Domain\AuthenticationServer.Domain.csproj" />
+    <ProjectReference Include="..\AuthenticationServer.Persistence\AuthenticationServer.Persistence.csproj" />
+    <ProjectReference Include="..\AuthenticationServer.Shared\AuthenticationServer.Shared.csproj" />
   </ItemGroup>
 
 </Project>
